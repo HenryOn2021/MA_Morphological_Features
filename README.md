@@ -56,14 +56,14 @@ python MA_Morphological_Features_Pipeline_main.py cine_labeller --root_dir path/
 ```
 
 The second function perform the proposed method in the literature, i.e. MA morphological feature extraction and MR classification. It can be run as a end-to-end process or individual step based on the index below:
-- 0. end-to-end
-- 1. Image to World coordinates conversion
-- 2. Coordinates interpolation
-- 3. Fitting best-fit ellipse and plane and the corresponding feature extraction
-- 4. Displacement feature extraction
-- 5. Outlier detection
-- 6. Minimum Redundancy and Maximum Relevance (MRMR) feature selection
-- 7. MR classification
+- 0\. end-to-end
+- 1\. Image to World coordinates conversion
+- 2\. Coordinates interpolation
+- 3\. Fitting best-fit ellipse and plane and the corresponding feature extraction
+- 4\. Displacement feature extraction
+- 5\. Outlier detection
+- 6\. Minimum Redundancy and Maximum Relevance (MRMR) feature selection
+- 7\. MR classification
 
 ```sh
 # Execute the Cine MRI Analysis Pipeline

@@ -155,6 +155,3 @@ def main():
         
 if __name__ == "__main__":
     main()
-    
-# Terminal
-# python main.py cine_labeller --cine_images_dir path/to/images --labels_dict_path path/to/labels.json

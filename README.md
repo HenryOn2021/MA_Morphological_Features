@@ -67,5 +67,5 @@ The second function perform the proposed method in the literature, i.e. MA morph
 
 ```sh
 # Execute the Cine MRI Analysis Pipeline
-python main.py cine_pipeline --mode int(index_listed_above) --root_dir path/to/read_in_N_write_out --dcm_dir path/to/images --labels_path path/to/labels.json
+python MA_Morphological_Features_Pipeline_main.py cine_pipeline --mode int(index_listed_above) --root_dir path/to/read_in_N_write_out --dcm_dir path/to/images --labels_path path/to/labels.json
 ```

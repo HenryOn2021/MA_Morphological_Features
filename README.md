@@ -51,14 +51,14 @@ The script has 2 main functions and each execution is dependent on the previous 
 - Cine MRI Labeller
 - Cine MRI Analysis Pipeline
 
-The first function read in each Cine MRIs in the patient folder for manual labelling of the mitral annulus landmarks from user input.
+The first function read in each Cine MRI in the patient folder for manual labelling of the mitral annulus landmarks from user input.
 ```sh
 # Execute the Cine MRI Labeller
 python MA_Morphological_Features_Pipeline_main.py cine_labeller --root_dir path/to/read_in_N_write_out --dcm_dir path/to/images --labels_path path/to/labels.json --timeout idel_time_before_exiting --n number_of_phases2skip_labelling --pathology label_only_NoVD_or_MR
 ```
 
 
-The second function perform the proposed method in the literature, i.e. MA morphological feature extraction and MR classification. It can be run as a end-to-end process or individual step based on the index below:
+The second function perform the proposed method in the literature, i.e. MA morphological feature extraction and MR classification. It can be run as an end-to-end process or individual step based on the index below:
 - 0\. end-to-end
 - 1\. Image to World coordinates conversion
 - 2\. Coordinates interpolation

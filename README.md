@@ -1,5 +1,7 @@
 # Classification of Mitral Regurgitation from Cardiac Cine MRI using Clinically-Interpretable Morphological Features
 
+Arxiv link of the paper: TBA
+
 ## Pre-requisite
 This project is designed to run on Cine long-axis (LAX) views MRIs, reconstructed to 30 phases in DICOM format. 
 
@@ -77,3 +79,5 @@ Default argument(s):
 - n: 5
 - pathology: None
 - mode: 0
+
+Please refer to the paper for further details of the methods in the pipeline.

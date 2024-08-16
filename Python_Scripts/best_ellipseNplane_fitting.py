@@ -190,19 +190,28 @@ class MitralAnnulusEllipseFitter:
         """
         xc, yc, a, b, theta = model.params
 
-        def correct_ellipse_model_params(a, b, theta):
-            if a < b:
-                if theta < np.pi / 2:
-                    return b, a, theta + np.pi / 2
-                else:
-                    return b, a, theta - np.pi / 2
+        def correct_ellipse_model_params(a: float, b: float, theta: float) -> tuple:
+        if a < b:
+            if theta < np.pi / 2:
+                a_b_swapped = True
+                return theta + np.pi / 2, a_b_swapped
             else:
-                if theta < 0:
-                    return a, b, np.pi + theta
-                else:
-                    return a, b, theta
-
-        a, b, theta = correct_ellipse_model_params(a, b, theta)
+                a_b_swapped = True
+                return theta - np.pi / 2, a_b_swapped
+        else:
+            if theta < 0:
+                a_b_swapped = False
+                return np.pi + theta, a_b_swapped
+            else:
+                a_b_swapped = False
+                return theta, a_b_swapped
+        
+        theta, a_b_swapped = correct_ellipse_model_params(a, b, theta)
+        
+        if a_b_swapped:
+            a = copy.deepcopy(b)
+            b = copy.deepcopy(a)
+            
         area = np.pi * a * b
         h = ((a - b) ** 2) / ((a + b) ** 2)
         perimeter = np.pi * (a + b) * (1 + (3 * h) / (10 + np.sqrt(4 - 3 * h)))

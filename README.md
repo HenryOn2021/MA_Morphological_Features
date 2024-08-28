@@ -7,6 +7,8 @@ This project is designed to run on Cine long-axis (LAX) views MRIs, reconstructe
 
 The label for individual cases are expected to store in a .json file, with a pairing identifier as the patient folder name as the key. Under each patient key, there should have 2 additional key: 'NoVD' (No Valvular Disease) and 'MR' (Mitral Regurgitation), each with a value of 0 or 1.
 
+However, the data used in the project cannot be disclosed to the public.
+
 Example Folder Structure:
 ```
 root_dir/
